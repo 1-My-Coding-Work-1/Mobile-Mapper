@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         northwesternAnnotation.title = "Northwestern University"
         mapView.addAnnotation(northwesternAnnotation) // pin on Northwestern location
         locationManager.requestWhenInUseAuthorization()
-        mapView.showsUserLocation = true //default is location of Apple's headquarters in Cupertino California, shows default cuz there's no GPS system in laptop as in phone, so simulate location by going to Debug (on top bar) -> Simulate location -> Custom -> 47.0516, -87.6814 ???
+        mapView.showsUserLocation = true //default is location of Apple's headquarters in Cupertino California, shows default cuz there's no GPS system in laptop as in phone, so simulate location clicking on the simulator and going to Debug (on top bar) -> Simulate location -> Custom -> 42.0516, -87.6814 ???
         geocoder.geocodeAddressString(address) { (placemarks, error) in //Mount Rushmore location
             for placemark in placemarks! {
                 let annotation = MKPointAnnotation()
